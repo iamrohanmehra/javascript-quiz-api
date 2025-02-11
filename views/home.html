@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz API - Documentation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>JavaScript Quiz API</h1>
+        <div class="warning-card">
+          <div class="warning-title">⚠️ API Usage Guidelines</div>
+          <div class="warning-content">
+            This API is for educational purposes only. Please be mindful of rate
+            limits and usage guidelines.
+          </div>
+        </div>
+
+        <div class="guidelines">
+          <ul>
+            <li>Use appropriate error handling in your applications</li>
+            <li>Cache responses when possible to minimize requests</li>
+            <li>Include proper attribution when using this API</li>
+            <li>Rate limit: 100 requests per hour per IP</li>
+            <li>Questions and answers are subject to change</li>
+          </ul>
+        </div>
+
+        <div class="endpoints">
+          <div class="endpoint">
+            <h2>Get All Questions</h2>
+            <code>GET /api/questions</code>
+            <p>Returns all questions without answers</p>
+          </div>
+
+          <div class="endpoint">
+            <h2>Get Question by ID</h2>
+            <code>GET /api/questions/:id</code>
+            <p>Returns a specific question by ID</p>
+          </div>
+
+          <div class="endpoint">
+            <h2>Submit Answers</h2>
+            <code>POST /api/submit</code>
+            <p>Submit answers and get results</p>
+            <pre><code>[
+{
+"questionId": 1,
+"selectedOption": "A"
+}
+]</code></pre>
+          </div>
+
+          <div class="endpoint">
+            <h2>Debug Info</h2>
+            <code>GET /api/debug/questions</code>
+            <p>Shows total questions and their IDs</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© ${new Date().getFullYear()} Codekaro. All rights reserved.</p>
+        <p style="margin-top: 0.5rem">
+          <a href="/privacy-policy">Privacy Policy</a> •
+          <a
+            href="https://codekaro.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Codekaro</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
