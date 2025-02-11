@@ -23,7 +23,7 @@
             <li>Use appropriate error handling in your applications</li>
             <li>Cache responses when possible to minimize requests</li>
             <li>Include proper attribution when using this API</li>
-            <li>Rate limit: 100 requests per hour per IP</li>
+            <li>Rate limit: 100 requests per 15 minutes per IP</li>
             <li>Questions and answers are subject to change</li>
           </ul>
         </div>
@@ -33,30 +33,72 @@
             <h2>Get All Questions</h2>
             <code>GET /api/questions</code>
             <p>Returns all questions without answers</p>
+            <pre><code>{
+  "id": 1,
+  "question": "What is the difference between == and === in JavaScript?",
+  "optionA": "No difference",
+  "optionB": "=== checks value only",
+  "optionC": "== checks type only",
+  "optionD": "=== checks both value and type",
+  "explanation": "=== is the strict equality operator that checks both value and type without coercion"
+}</code></pre>
           </div>
 
           <div class="endpoint">
             <h2>Get Question by ID</h2>
             <code>GET /api/questions/:id</code>
             <p>Returns a specific question by ID</p>
+            <pre><code>{
+  "id": 1,
+  "question": "What is the difference between == and === in JavaScript?",
+  "optionA": "No difference",
+  "optionB": "=== checks value only",
+  "optionC": "== checks type only",
+  "optionD": "=== checks both value and type",
+  "explanation": "=== is the strict equality operator that checks both value and type without coercion"
+}</code></pre>
           </div>
 
           <div class="endpoint">
             <h2>Submit Answers</h2>
             <code>POST /api/submit</code>
             <p>Submit answers and get results</p>
+            <p><strong>Request Body:</strong></p>
             <pre><code>[
-{
-"questionId": 1,
-"selectedOption": "A"
-}
+  {
+    "questionId": 1,
+    "selectedOption": "D"
+  }
 ]</code></pre>
+            <p><strong>Response:</strong></p>
+            <pre><code>{
+  "totalQuestions": 1,
+  "correctAnswers": 1,
+  "score": "100.00%",
+  "results": [
+    {
+      "questionId": 1,
+      "correct": true,
+      "explanation": "Correct! === checks both value and type without type coercion.",
+      "correctAnswerText": "=== checks both value and type"
+    }
+  ]
+}</code></pre>
           </div>
 
           <div class="endpoint">
             <h2>Debug Info</h2>
             <code>GET /api/debug/questions</code>
             <p>Shows total questions and their IDs</p>
+            <pre><code>{
+  "total": 50,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between == and === in JavaScript?"
+    }
+  ]
+}</code></pre>
           </div>
         </div>
       </div>

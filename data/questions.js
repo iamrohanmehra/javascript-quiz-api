@@ -7,6 +7,7 @@ const questions = [
     optionC: "== checks type only",
     optionD: "=== checks both value and type",
     correctAnswer: "D",
+    correctAnswerText: "=== checks both value and type",
     explanation:
       "=== is the strict equality operator that checks both value and type without coercion",
     explanations: {
@@ -24,6 +25,7 @@ const questions = [
     optionC: "A method to end loops",
     optionD: "A way to close database connections",
     correctAnswer: "B",
+    correctAnswerText: "A function with access to its outer scope",
     explanation:
       "A closure is a function that has access to variables in its outer lexical scope, even after the outer function has returned",
     explanations: {
@@ -41,6 +43,7 @@ const questions = [
     optionC: "To store global variables",
     optionD: "To create loops",
     correctAnswer: "B",
+    correctAnswerText: "To handle asynchronous operations",
     explanation:
       "Promises are used to handle asynchronous operations and their potential results (success or failure)",
     explanations: {
@@ -58,6 +61,7 @@ const questions = [
     optionC: "To handle promises more elegantly",
     optionD: "To create loops",
     correctAnswer: "C",
+    correctAnswerText: "To handle promises more elegantly",
     explanation:
       "async/await provides a more readable way to work with promises using synchronous-looking code",
     explanations: {
@@ -75,6 +79,7 @@ const questions = [
     optionC: "Event propagation from child to parent elements",
     optionD: "Creating event listeners",
     correctAnswer: "C",
+    correctAnswerText: "Event propagation from child to parent elements",
     explanation:
       "Event bubbling is when an event triggers on the deepest target element and bubbles up through parent elements",
     explanations: {
@@ -92,6 +97,7 @@ const questions = [
     optionC: "Cleaning up memory",
     optionD: "Creating new objects",
     correctAnswer: "B",
+    correctAnswerText: "Breaking down arrays/objects into variables",
     explanation:
       "Destructuring allows you to unpack values from arrays or properties from objects into distinct variables",
     explanations: {
@@ -109,6 +115,7 @@ const questions = [
     optionC: "To sort arrays",
     optionD: "To find elements",
     correctAnswer: "B",
+    correctAnswerText: "To transform each array element",
     explanation:
       "map() creates a new array with the results of calling a function for every array element",
     explanations: {
@@ -126,6 +133,7 @@ const questions = [
     optionC: "To enforce stricter parsing and error handling",
     optionD: "To include external scripts",
     correctAnswer: "C",
+    correctAnswerText: "To enforce stricter parsing and error handling",
     explanation:
       "'use strict' enables strict mode which catches common mistakes and prevents unsafe actions",
     explanations: {
@@ -143,6 +151,7 @@ const questions = [
     optionC: "To declare variables",
     optionD: "To create loops",
     correctAnswer: "B",
+    correctAnswerText: "To spread elements of arrays/objects",
     explanation:
       "The spread operator allows an iterable to be expanded into individual elements",
     explanations: {
@@ -160,6 +169,7 @@ const questions = [
     optionC: "To validate JSON",
     optionD: "To create objects",
     correctAnswer: "B",
+    correctAnswerText: "To convert objects to JSON strings",
     explanation:
       "JSON.stringify() converts a JavaScript value to a JSON string",
     explanations: {
@@ -179,6 +189,8 @@ const questions = [
     optionD:
       "localStorage persists after browser close, sessionStorage doesn't",
     correctAnswer: "D",
+    correctAnswerText:
+      "localStorage persists after browser close, sessionStorage doesn't",
     explanation:
       "localStorage data persists until explicitly cleared, while sessionStorage data is cleared when the browser session ends",
     explanations: {
@@ -196,6 +208,7 @@ const questions = [
     optionC: "To reference the current object context",
     optionD: "To reference global variables",
     correctAnswer: "C",
+    correctAnswerText: "To reference the current object context",
     explanation:
       "The 'this' keyword refers to the object that is currently executing the code",
     explanations: {
@@ -213,6 +226,7 @@ const questions = [
     optionC: "Handling events on parent for child elements",
     optionD: "Preventing event propagation",
     correctAnswer: "C",
+    correctAnswerText: "Handling events on parent for child elements",
     explanation:
       "Event delegation is a technique of handling events on a parent element for its present and future child elements",
     explanations: {
@@ -230,6 +244,7 @@ const questions = [
     optionC: "To accumulate array elements into a single value",
     optionD: "To sort array elements",
     correctAnswer: "C",
+    correctAnswerText: "To accumulate array elements into a single value",
     explanation:
       "reduce() executes a reducer function on each element, resulting in a single output value",
     explanations: {
@@ -247,6 +262,7 @@ const questions = [
     optionC: "To store data locally",
     optionD: "To create animations",
     correctAnswer: "B",
+    correctAnswerText: "To make HTTP requests",
     explanation:
       "The fetch API provides an interface for making HTTP requests to servers",
     explanations: {
@@ -264,6 +280,7 @@ const questions = [
     optionC: "To sort data",
     optionD: "To create objects",
     correctAnswer: "B",
+    correctAnswerText: "To store unique values",
     explanation:
       "Set is a collection of unique values, where each value can occur only once",
     explanations: {
@@ -281,6 +298,7 @@ const questions = [
     optionC: "To handle errors gracefully",
     optionD: "To declare variables",
     correctAnswer: "C",
+    correctAnswerText: "To handle errors gracefully",
     explanation:
       "try...catch blocks are used to handle potential errors in code execution",
     explanations: {
@@ -298,6 +316,7 @@ const questions = [
     optionC: "To permanently set 'this' context",
     optionD: "To bind event listeners",
     correctAnswer: "C",
+    correctAnswerText: "To permanently set 'this' context",
     explanation:
       "bind() creates a new function with a fixed 'this' context regardless of how it's called",
     explanations: {
@@ -315,6 +334,7 @@ const questions = [
     optionC: "To modify object keys",
     optionD: "To delete object keys",
     correctAnswer: "B",
+    correctAnswerText: "To return an array of object's keys",
     explanation:
       "Object.keys() returns an array of a given object's enumerable property names",
     explanations: {
@@ -332,6 +352,7 @@ const questions = [
     optionC: "To automatically return promises",
     optionD: "To create synchronous code",
     correctAnswer: "C",
+    correctAnswerText: "To automatically return promises",
     explanation:
       "async functions automatically wrap the return value in a promise and allow the use of await",
     explanations: {
@@ -349,6 +370,7 @@ const questions = [
     optionC: "To sort array elements",
     optionD: "To join array elements",
     correctAnswer: "B",
+    correctAnswerText: "To create a new array with elements that pass a test",
     explanation:
       "filter() creates a new array with elements that pass the test implemented by the provided function",
     explanations: {
@@ -366,6 +388,7 @@ const questions = [
     optionC: "To copy properties from one object to another",
     optionD: "To compare objects",
     correctAnswer: "C",
+    correctAnswerText: "To copy properties from one object to another",
     explanation:
       "Object.assign() copies all enumerable properties from one or more source objects to a target object",
     explanations: {
@@ -383,6 +406,7 @@ const questions = [
     optionC: "To remove elements from an array",
     optionD: "To sort array elements",
     correctAnswer: "B",
+    correctAnswerText: "To check if an array contains a specific element",
     explanation:
       "includes() determines whether an array includes a certain value among its entries",
     explanations: {
@@ -400,6 +424,7 @@ const questions = [
     optionC: "To return the first element that passes a test",
     optionD: "To modify array elements",
     correctAnswer: "C",
+    correctAnswerText: "To return the first element that passes a test",
     explanation:
       "find() returns the value of the first element in an array that passes the test function",
     explanations: {
@@ -417,6 +442,7 @@ const questions = [
     optionC: "To prevent object modification",
     optionD: "To compare objects",
     correctAnswer: "C",
+    correctAnswerText: "To prevent object modification",
     explanation:
       "Object.freeze() makes an object immutable - properties can't be added, deleted, or modified",
     explanations: {
@@ -434,6 +460,7 @@ const questions = [
     optionC: "To find an element",
     optionD: "To sort elements",
     correctAnswer: "B",
+    correctAnswerText: "To check if all elements pass a test",
     explanation:
       "every() tests whether all elements in the array pass the test implemented by the provided function",
     explanations: {
@@ -451,6 +478,7 @@ const questions = [
     optionC: "To check if at least one element passes a test",
     optionD: "To sort some elements",
     correctAnswer: "C",
+    correctAnswerText: "To check if at least one element passes a test",
     explanation:
       "some() tests whether at least one element in the array passes the test implemented by the provided function",
     explanations: {
@@ -468,6 +496,7 @@ const questions = [
     optionC: "To reject all promises",
     optionD: "To create new promises",
     correctAnswer: "B",
+    correctAnswerText: "To wait for all promises to complete",
     explanation:
       "Promise.all() waits for all promises to resolve and returns an array of their results",
     explanations: {
@@ -485,6 +514,7 @@ const questions = [
     optionC: "To cancel other promises",
     optionD: "To combine promise results",
     correctAnswer: "B",
+    correctAnswerText: "To return the fastest promise result",
     explanation:
       "Promise.race() returns the result of the first promise that resolves or rejects",
     explanations: {
@@ -502,6 +532,7 @@ const questions = [
     optionC: "To prevent adding/deleting properties",
     optionD: "To freeze an object completely",
     correctAnswer: "C",
+    correctAnswerText: "To prevent adding/deleting properties",
     explanation:
       "Object.seal() prevents adding or deleting properties but allows modifying existing ones",
     explanations: {
@@ -519,13 +550,14 @@ const questions = [
     optionC: "To filter array elements",
     optionD: "To sort array elements",
     correctAnswer: "B",
+    correctAnswerText: "To flatten nested array structures",
     explanation:
       "flat() creates a new array with all sub-array elements concatenated recursively up to the specified depth",
     explanations: {
       A: "Incorrect. splice() or filter() remove elements.",
       B: "Correct! flat() flattens nested arrays into a single-level array.",
       C: "Incorrect. filter() is used to filter elements.",
-      D: "Incorrect. sort() is used to sort elements.",
+      D: "Incorrect. sort() is used for sorting.",
     },
   },
   {
@@ -536,6 +568,7 @@ const questions = [
     optionC: "To count object properties",
     optionD: "To modify object properties",
     correctAnswer: "B",
+    correctAnswerText: "To return an array of key-value pairs",
     explanation:
       "Object.entries() returns an array of a given object's own enumerable string-keyed property [key, value] pairs",
     explanations: {
@@ -553,6 +586,7 @@ const questions = [
     optionC: "To map and then flatten results",
     optionD: "To sort and flatten arrays",
     correctAnswer: "C",
+    correctAnswerText: "To map and then flatten results",
     explanation:
       "flatMap() first maps each element using a mapping function, then flattens the result into a new array",
     explanations: {
@@ -570,6 +604,7 @@ const questions = [
     optionC: "To modify object values",
     optionD: "To count object values",
     correctAnswer: "B",
+    correctAnswerText: "To return an array of object's values",
     explanation:
       "Object.values() returns an array of a given object's own enumerable property values",
     explanations: {
@@ -587,6 +622,7 @@ const questions = [
     optionC: "To wait for all promises to settle",
     optionD: "To reject all promises",
     correctAnswer: "C",
+    correctAnswerText: "To wait for all promises to settle",
     explanation:
       "Promise.allSettled() waits for all promises to settle (either fulfill or reject) and returns their results",
     explanations: {
@@ -604,6 +640,7 @@ const questions = [
     optionC: "To access elements with positive/negative indices",
     optionD: "To modify elements",
     correctAnswer: "C",
+    correctAnswerText: "To access elements with positive/negative indices",
     explanation:
       "at() takes an integer value and returns the item at that index, allowing positive and negative integers",
     explanations: {
@@ -621,6 +658,7 @@ const questions = [
     optionC: "To modify object properties",
     optionD: "To delete object properties",
     correctAnswer: "B",
+    correctAnswerText: "To check if property exists directly on object",
     explanation:
       "Object.hasOwn() returns true if the specified object has the indicated property as its own property",
     explanations: {
@@ -638,6 +676,7 @@ const questions = [
     optionC: "To return first fulfilled promise",
     optionD: "To cancel promises",
     correctAnswer: "C",
+    correctAnswerText: "To return first fulfilled promise",
     explanation:
       "Promise.any() returns a promise that fulfills when any of the input promises fulfills",
     explanations: {
@@ -655,6 +694,7 @@ const questions = [
     optionC: "To find elements",
     optionD: "To sort elements",
     correctAnswer: "B",
+    correctAnswerText: "To fill array with static value",
     explanation:
       "fill() changes all elements in an array to a static value, from a start index to an end index",
     explanations: {
@@ -672,6 +712,7 @@ const questions = [
     optionC: "To prevent adding new properties",
     optionD: "To delete all properties",
     correctAnswer: "C",
+    correctAnswerText: "To prevent adding new properties",
     explanation:
       "Object.preventExtensions() prevents new properties from being added to an object",
     explanations: {
@@ -689,6 +730,8 @@ const questions = [
     optionC: "To create arrays",
     optionD: "To store primitive values",
     correctAnswer: "B",
+    correctAnswerText:
+      "To store key-value pairs with weak references to objects",
     explanation:
       "WeakMap holds key-value pairs where keys must be objects and are held weakly, allowing garbage collection",
     explanations: {
@@ -706,6 +749,8 @@ const questions = [
     optionC: "To create timers",
     optionD: "To pause code execution",
     correctAnswer: "B",
+    correctAnswerText:
+      "To schedule animations in sync with browser's refresh rate",
     explanation:
       "requestAnimationFrame tells the browser to perform an animation before the next repaint",
     explanations: {
@@ -723,6 +768,7 @@ const questions = [
     optionC: "To create unique identifiers",
     optionD: "To create objects",
     correctAnswer: "C",
+    correctAnswerText: "To create unique identifiers",
     explanation:
       "Symbol creates a unique and immutable primitive value that can be used as a key for object properties",
     explanations: {
@@ -740,6 +786,8 @@ const questions = [
     optionC: "To create regular sets",
     optionD: "To store primitive values",
     correctAnswer: "B",
+    correctAnswerText:
+      "To store unique object references that can be garbage collected",
     explanation:
       "WeakSet allows storing weak references to objects that can be garbage collected when no longer referenced elsewhere",
     explanations: {
@@ -757,6 +805,7 @@ const questions = [
     optionC: "To handle DOM events",
     optionD: "To create intervals",
     correctAnswer: "B",
+    correctAnswerText: "To schedule tasks in the microtask queue",
     explanation:
       "queueMicrotask() queues a function to be executed in the microtask queue after the current task completes",
     explanations: {
@@ -774,6 +823,7 @@ const questions = [
     optionC: "To check if an element exists",
     optionD: "To modify array elements",
     correctAnswer: "B",
+    correctAnswerText: "To find the first index that passes a test",
     explanation:
       "findIndex() returns the index of the first element in an array that passes the test function",
     explanations: {
@@ -791,6 +841,7 @@ const questions = [
     optionC: "To filter array elements",
     optionD: "To sort arrays",
     correctAnswer: "A",
+    correctAnswerText: "To create arrays from other objects",
     explanation:
       "Array.from() creates a new Array instance from an array-like or iterable object",
     explanations: {
@@ -808,6 +859,7 @@ const questions = [
     optionC: "To determine if two values are the same value",
     optionD: "To modify objects",
     correctAnswer: "C",
+    correctAnswerText: "To determine if two values are the same value",
     explanation:
       "Object.is() determines whether two values are the same value, handling special cases like NaN",
     explanations: {
@@ -825,6 +877,7 @@ const questions = [
     optionC: "To prevent object modifications",
     optionD: "To merge objects",
     correctAnswer: "B",
+    correctAnswerText: "To define custom behavior for basic operations",
     explanation:
       "Proxy allows you to create an object that can intercept and redefine fundamental operations for another object",
     explanations: {
@@ -842,6 +895,7 @@ const questions = [
     optionC: "To reflect DOM elements",
     optionD: "To reverse strings",
     correctAnswer: "B",
+    correctAnswerText: "To provide methods for interceptable operations",
     explanation:
       "Reflect provides methods for interceptable JavaScript operations, working alongside Proxy handlers",
     explanations: {
