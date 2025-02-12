@@ -127,14 +127,13 @@ app.get("/api/debug", (req, res, next) => {
 // Serve static files from views directory
 app.use(express.static(join(__dirname, "views")));
 
-// Update the homepage route
+// Homepage route
 app.get("/", async (req, res, next) => {
   try {
     let html = await fs.readFile(
       join(__dirname, "views", "home.html"),
       "utf-8"
     );
-    // Replace the year dynamically
     html = html.replace(
       "${new Date().getFullYear()}",
       new Date().getFullYear()
@@ -222,9 +221,23 @@ app.get("/api/debug/questions", async (req, res, next) => {
   }
 });
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({ error: "Route not found" });
+// 404 handler for API routes
+app.use("/api/*", (req, res) => {
+  res.status(404).json({ error: "API endpoint not found" });
+});
+
+// 404 handler for all other routes
+app.use(async (req, res) => {
+  try {
+    let html = await fs.readFile(join(__dirname, "views", "404.html"), "utf-8");
+    html = html.replace(
+      "${new Date().getFullYear()}",
+      new Date().getFullYear()
+    );
+    res.status(404).send(html);
+  } catch (error) {
+    res.status(404).send("404 - Page Not Found");
+  }
 });
 
 // Error handler
