@@ -146,10 +146,8 @@ app.get("/", async (req, res, next) => {
 
 app.get("/api/questions", async (req, res, next) => {
   try {
-    const questionsWithoutAnswers = questions.map(
-      ({ correctAnswer, explanations, ...rest }) => rest
-    );
-    res.json(questionsWithoutAnswers);
+    // Return full questions array without filtering
+    res.json(questions);
   } catch (error) {
     next(error);
   }
@@ -164,8 +162,8 @@ app.get("/api/questions/:id", async (req, res, next) => {
       return res.status(404).json({ error: "Question not found" });
     }
 
-    const { correctAnswer, explanations, ...questionWithoutAnswer } = question;
-    res.json(questionWithoutAnswer);
+    // Return full question object without filtering
+    res.json(question);
   } catch (error) {
     next(error);
   }

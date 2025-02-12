@@ -34,13 +34,21 @@
             <code>GET /api/questions</code>
             <p>Returns all questions without answers</p>
             <pre><code>{
-  "id": 1,
-  "question": "What is the difference between == and === in JavaScript?",
-  "optionA": "No difference",
-  "optionB": "=== checks value only",
-  "optionC": "== checks type only",
-  "optionD": "=== checks both value and type",
-  "explanation": "=== is the strict equality operator that checks both value and type without coercion"
+  "id": 2,
+  "question": "What is a closure in JavaScript?",
+  "optionA": "A way to close browser windows",
+  "optionB": "A function with access to its outer scope",
+  "optionC": "A method to end loops",
+  "optionD": "A way to close database connections",
+  "correctAnswer": "B",
+  "correctAnswerText": "A function with access to its outer scope",
+  "explanation": "A closure is a function that has access to variables in its outer lexical scope, even after the outer function has returned",
+  "explanations": {
+    "A": "Incorrect. Closures have nothing to do with browser windows.",
+    "B": "Correct! A closure maintains access to variables from its outer scope.",
+    "C": "Incorrect. Loops are controlled by break or continue statements.",
+    "D": "Incorrect. Database connections are handled differently."
+  }
 }</code></pre>
           </div>
 
@@ -49,13 +57,21 @@
             <code>GET /api/questions/:id</code>
             <p>Returns a specific question by ID</p>
             <pre><code>{
-  "id": 1,
-  "question": "What is the difference between == and === in JavaScript?",
-  "optionA": "No difference",
-  "optionB": "=== checks value only",
-  "optionC": "== checks type only",
-  "optionD": "=== checks both value and type",
-  "explanation": "=== is the strict equality operator that checks both value and type without coercion"
+  "id": 2,
+  "question": "What is a closure in JavaScript?",
+  "optionA": "A way to close browser windows",
+  "optionB": "A function with access to its outer scope",
+  "optionC": "A method to end loops",
+  "optionD": "A way to close database connections",
+  "correctAnswer": "B",
+  "correctAnswerText": "A function with access to its outer scope",
+  "explanation": "A closure is a function that has access to variables in its outer lexical scope, even after the outer function has returned",
+  "explanations": {
+    "A": "Incorrect. Closures have nothing to do with browser windows.",
+    "B": "Correct! A closure maintains access to variables from its outer scope.",
+    "C": "Incorrect. Loops are controlled by break or continue statements.",
+    "D": "Incorrect. Database connections are handled differently."
+  }
 }</code></pre>
           </div>
 
@@ -66,8 +82,8 @@
             <p><strong>Request Body:</strong></p>
             <pre><code>[
   {
-    "questionId": 1,
-    "selectedOption": "D"
+    "questionId": 2,
+    "selectedOption": "B"
   }
 ]</code></pre>
             <p><strong>Response:</strong></p>
@@ -77,10 +93,10 @@
   "score": "100.00%",
   "results": [
     {
-      "questionId": 1,
+      "questionId": 2,
       "correct": true,
-      "explanation": "Correct! === checks both value and type without type coercion.",
-      "correctAnswerText": "=== checks both value and type"
+      "explanation": "Correct! A closure maintains access to variables from its outer scope.",
+      "correctAnswerText": "A function with access to its outer scope"
     }
   ]
 }</code></pre>
@@ -94,8 +110,8 @@
   "total": 50,
   "questions": [
     {
-      "id": 1,
-      "question": "What is the difference between == and === in JavaScript?"
+      "id": 2,
+      "question": "What is a closure in JavaScript?"
     }
   ]
 }</code></pre>
